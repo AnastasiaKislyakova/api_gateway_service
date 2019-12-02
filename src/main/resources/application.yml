@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: api-gateway-service
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    orders:
+      path: /api/orders/**
+      serviceId: order-management-service
+      strip-prefix: false
+    warehouse:
+      path: /api/warehouse/**
+      serviceId: warehouse-management-service
+      strip-prefix: false
