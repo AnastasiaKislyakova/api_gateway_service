@@ -17,3 +17,7 @@ zuul:
       path: /api/warehouse/**
       serviceId: warehouse-management-service
       strip-prefix: false
+    payment:
+      path: /api/payment/**
+      serviceId: payment-management-service
+      strip-prefix: false
